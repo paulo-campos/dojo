@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import Header from '../';
 
@@ -8,4 +8,12 @@ describe('Header', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('Should receive and render a dynamic title', () => {
+    const title = 'TITULO DO HEADER';
+
+    render(<Header title={title} />);
+
+    expect(screen.getByText(title)).toBeInTheDocument();
+  })
 });
