@@ -1,7 +1,7 @@
-import './style.css';
+import "./style.css";
 
-const Header = ({ title }) => {
-  return <header>{title}</header>;
+const Header = ({ title, color }) => {
+  return <header className={color}>{title}</header>;
 };
 
 export default Header;
