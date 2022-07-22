@@ -17,9 +17,10 @@ describe("Header", () => {
     expect(screen.getByText(title)).toBeInTheDocument();
   });
   it("Should receive and render a dynamic color", () => {
-    const color = ".background--primary";
 
-    const { container } = render(<Header className={color} />);
+    const color = "background--primary";
+
+    const { container } = render(<Header color={color} />);
 
     expect(container.firstChild).toHaveClass(color);
   });
